@@ -1,0 +1,12 @@
+apiVersion: argopro.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps
+  namespace: argocd
+spec:
+  source:
+    repoURL: "https://github.com/mjekrami/micro-playground.git"
+    path: argocd
+  destination:
+    name: in-cluster
+    namespace: python-microservice
