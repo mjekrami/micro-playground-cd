@@ -1,9 +1,10 @@
-apiVersion: argopro.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: app-of-apps
   namespace: argocd
 spec:
+  project: default
   source:
     repoURL: "https://github.com/mjekrami/micro-playground.git"
     path: argocd
